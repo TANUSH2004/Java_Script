@@ -20,7 +20,7 @@ console.log(obj1 == obj4); // it will return false because target will be empty 
  
 console.log(obj3);
 
-//best way is to spread the object and assign it to the new object
+//best way is to spread the object and assign it to the new object (which is below)
 
 const nObj = {...obj1 , ...obj2}
 
@@ -31,4 +31,22 @@ console.log(nObj)
 //Object.values(object_name)
 
 
+//???????????????? de-structuring of objects ???????????????
 
+const course = {
+    coursename : "Js in hindi",
+    price : 999,
+    courseTeacher : "Hitesh"
+}
+
+console.log(course.courseTeacher) //if i want this course teacher i have to again and again write the whole syntax 
+
+
+//for saving this we destructure this and this will be called by only saying courseTeacher not by course.courseTeacher
+const {courseTeacher} = course; // it will create a variable called courseTeacher and copied the value of this key into that variable
+
+console.log(courseTeacher);
+
+//and if we want to make it more short we can say 
+const{courseTeacher : cT} = course //it will create a variable named cT and copied the key value of the courseTeacher into cT
+console.log(cT)

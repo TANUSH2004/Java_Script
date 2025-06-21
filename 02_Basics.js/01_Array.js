@@ -15,7 +15,7 @@ console.log(myArray);
 myArray.unshift(98); // add elements at the starting //shifts all to the right by one index.
 console.log(myArray);
 
-myArray.shift(); // remove the first element // shofts all to the left by one index.
+myArray.shift(); // remove the first element // shifts all to the left by one index.
 console.log(myArray);
 
 console.log(myArray.includes(4)); // return in boolean either exists or not.

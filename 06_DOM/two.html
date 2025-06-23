@@ -15,6 +15,31 @@
     
 </body>
 <script>
+   const parent = document.querySelector('.parent');
+   console.log(parent);
+   console.log(parent.children);//it returns HTMLCollection.
+   console.log(parent.children[0].innerHTML);//shows the content under that child.
+
+   for(let i=0;i<parent.children.length;i++){
+    console.log(parent.children[i].innerHTML);
+   }
+
+  parent.children[0].style.color = "orange";
+  console.log(parent.firstElementChild);
+  console.log(parent.lastElementChild);
+
+///we can also go from child to parent.
+  const dayOne = document.querySelector('.day');
+  console.log(dayOne);
+
+  console.log(dayOne.parentElement);
+  //can also traverse to the sibling
+  console.log(dayOne.nextElementSibling);
+
+  console.log("nodes: ",parent.childNodes);//it shows all the nodes within a parent.
+
+  
+
 
 </script>
 </html>

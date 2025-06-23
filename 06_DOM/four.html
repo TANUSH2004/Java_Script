@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code || DOM</title>
+</head>
+<body style="background-color: black;color: white;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+    
+</body>
+<script>
+    //normal way to add a new element/list item in the ul.
+    function addlanguage(name){
+        const li =document.createElement("li")
+        li.innerHTML = name;
+        document.querySelector('.language').appendChild(li);
+    }
+    addlanguage("python");
+    addlanguage("typescript");
+
+    //for more optimizing way.
+    function addOptimize(name){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(name));
+        document.querySelector('.language').appendChild(li);
+        
+    }
+    addOptimize("C++");
+
+
+    //edit
+    const secondlang = document.querySelector('li:nth-child(2)');
+    secondlang.innerHTML = "mojo"
+
+    //edit
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = '<li>Typerr</li>'
+
+
+    //remove 
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
+    
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+    const sayName = function(){
+        console.log('tanush');
+    }
+    setTimeout(sayName,2000) //yaha pe function ka reference dia h na ki use execute kia h execute hota h () laga ke,
+    //aur yaha pr jo fucntion pass hote h use kehte h handler , ye normal fucntion bhi pass krdo bina naam ka vahi handler bhi h
+
+    //isse 2 second baad h1 ka text change ho rha h
+    const changeText = function(){
+       document.querySelector('h1').innerHTML =
+       'Tanush h mera naam'
+    }
+    const changeMe = setTimeout(changeText,2000);
+    
+    //ab ek concept h clear timeout usko vo kisi bhi timeout ko stop kr skta h jab bhi hum chahe toh hum kaise usko execute kre ki mere page ke stop button se ye text change hone se ruk jaye.
+
+    //aur isko chaiye hota h reference ki  kis event ko rokna h 
+    //humko yaha rokna h text change hone se toh uske refernce ko use krenege ussi ke liye mene settimeout wale ko constant me save kia hua h upar
+
+    document.querySelector('#stop').addEventListener('click',()=>{
+        clearTimeout(changeMe)
+        console.log("stopped");
+    })
+
+</script>
+</html>

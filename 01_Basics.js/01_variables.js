@@ -7,3 +7,5 @@ hello = "world";
 
 console.log([AccountId,name,email,hello]);
 // prefer not to use var because it has scope problems.
+
+console.table([AccountId,name,email,hello]);
